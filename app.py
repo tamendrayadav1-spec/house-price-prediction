@@ -44,4 +44,5 @@ with st.spinner('Predicting House Prize'):
   time.sleep(2)
 
 st.success(f'Estimated House Prize is: $ {final_prize}')
-st.markdown('''**Designed and Developed by: Shiv Gupta**''')
+st.markdown('''**Designed and Developed by: TAVENDRA YADAV**''')
+
