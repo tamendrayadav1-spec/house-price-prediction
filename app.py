@@ -17,13 +17,13 @@ final_X = X
 scaler = StandardScaler()
 scaled_X = scaler.fit_transform(final_X)
 
-st.sidebar.title('Select House features: ')
-st.sidebar.image('https://cdn.dribbble.com/userupload/20000742/file/original-aaf23458355a156d0cf85b8217a5065a.gif')
+st.sidebar.title('Select House features:')
+st.sidebar.image('https://i.pinimg.com/originals/f1/be/c8/f1bec81e20d80cd36c82379af920a4e9.gif')
 all_value = []
 for i in final_X:
   min_value = final_X[i].min()
   max_value = final_X[i].max()
-  result = st.sidebar.slider(f'Select {i} value',min_value,max_value)
+  result  = st.sidebar.slider(f'Select {i} value',min_value, max_value)
   all_value.append(result)
 
 user_X = scaler.transform([all_value])
@@ -37,18 +37,11 @@ def ml_model(X,y):
 model = ml_model(scaled_X,y)
 house_price = model.predict(user_X)[0]
 
-final_price = round(house_price * 1000000,2)
+final_prize = round(house_price * 100000,2)
 
-with st.spinner('predicting House price'):
+with st.spinner('Predicting House Prize'):
   import time
-  time.size(2)
+  time.sleep(2)
 
-st.success(f'Eestimated House Price is: $ {final_price}')
-st.merkdown('''**DESIGN and DEVLOPMENT by: TAVENDRA YADAV**''')
-
-
-  
-
-
-
-
+st.success(f'Estimated House Prize is: $ {final_prize}')
+st.markdown('''**Designed and Developed by: Shiv Gupta**''')
