@@ -29,7 +29,7 @@ for i in final_X:
 user_X = scaler.transfrom([all_value])
 
 @st.cache_data
-def ml_model(X,y)
+def ml_model(X,y):
   model = RandomForestRegressor()
   model.fit(X,y)
   return model
@@ -48,5 +48,6 @@ st.merkdown('''**DESIGN and DEVLOPMENT by: TAVENDRA YADAV**''')
 
 
   
+
 
 
